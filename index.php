@@ -1,3 +1,7 @@
+<?php
+require 'includes/data/hotels.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
