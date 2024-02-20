@@ -18,6 +18,11 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>Hotels</h1>
+    <header>
+        <div class="container my-4">
+            <h1>Hotels</h1>
+            <div class="separator"></div>
+        </div>
+    </header>
 </body>
 </html>

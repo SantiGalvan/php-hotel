@@ -8,4 +8,10 @@
 /* Generics */
 body {
     font-family: "Kdam Thmor Pro", sans-serif;
+    background-color: rgba(84, 84, 84, 0.5);
+}
+
+/*? Header */
+.separator {
+    border: 1px solid black;
 }
