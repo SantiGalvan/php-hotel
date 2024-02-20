@@ -33,15 +33,17 @@ require 'includes/data/hotels.php';
 
         <!-- Section Hotels -->
         <section id="hotels">
-            <?php foreach ($hotels as $hotel) : ?>
-                <ul>
-                    <li><?= $hotel['name'] ?></li>
-                    <li><?= $hotel['description'] ?></li>
-                    <li><?= $hotel['parking'] ?></li>
-                    <li><?= $hotel['vote'] ?></li>
-                    <li><?= $hotel['distance_to_center'] ?></li>
-                </ul>
-            <?php endforeach ?>
+            <div class="container">
+                <?php foreach ($hotels as $hotel) : ?>
+                    <ul>
+                        <li><?= $hotel['name'] ?></li>
+                        <li><?= $hotel['description'] ?></li>
+                        <li><?= $hotel['parking'] ?></li>
+                        <li><?= $hotel['vote'] ?></li>
+                        <li><?= $hotel['distance_to_center'] ?></li>
+                    </ul>
+                <?php endforeach ?>
+            </div>
         </section>
     </main>
 </body>
