@@ -54,7 +54,7 @@ require 'includes/data/hotels.php';
                         <tr>
                             <td><?= $hotel['name'] ?></td>
                             <td><?= $hotel['description'] ?></td>
-                            <td class="d-flex">
+                            <td>
                                 <?php if($hotel['parking']) : ?>
                                     <span class="check">
                                         <i class="fa-solid fa-check"></i>
