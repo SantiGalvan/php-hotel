@@ -2,6 +2,8 @@
 require 'includes/data/hotels.php';
 
 $data = $_GET;
+
+var_dump($data);
 ?>
 
 <!DOCTYPE html>
@@ -37,6 +39,14 @@ $data = $_GET;
                 </div>
                 <div class="form">
                     <form action="" method="get" class="d-flex align-items-center gap-4">
+                        <select class="form-select" name="star">
+                            <option>All</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                            <option value="4">Four</option>
+                            <option value="5">Five</option>
+                        </select>
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" name="parking" id="parking">
                             <label class="form-check-label" for="parking">Parking</label>
