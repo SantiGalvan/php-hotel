@@ -29,7 +29,20 @@ require 'includes/data/hotels.php';
 <body>
     <header>
         <div class="container my-4">
-            <h1>Hotels</h1>
+            <div class="header-top d-flex justify-content-between">
+                <div class="title">
+                    <h1>Hotels</h1>
+                </div>
+                <div class="form">
+                    <form action="" method="get" class="d-flex align-items-center gap-4">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="parking" id="parking">
+                            <label class="form-check-label" for="parking">Parking</label>
+                        </div>
+                        <button class="btn btn-primary">Filtra</button>
+                    </form>
+                </div>
+            </div>
             <div class="separator"></div>
         </div>
     </header>
