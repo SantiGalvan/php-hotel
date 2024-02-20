@@ -1,5 +1,7 @@
 <?php
 require 'includes/data/hotels.php';
+
+$data = $_GET;
 ?>
 
 <!DOCTYPE html>
@@ -29,7 +31,20 @@ require 'includes/data/hotels.php';
 <body>
     <header>
         <div class="container my-4">
-            <h1>Hotels</h1>
+            <div class="header-top d-flex justify-content-between">
+                <div class="title">
+                    <h1>Hotels</h1>
+                </div>
+                <div class="form">
+                    <form action="" method="get" class="d-flex align-items-center gap-4">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="parking" id="parking">
+                            <label class="form-check-label" for="parking">Parking</label>
+                        </div>
+                        <button class="btn btn-primary">Filtra</button>
+                    </form>
+                </div>
+            </div>
             <div class="separator"></div>
         </div>
     </header>
@@ -52,21 +67,23 @@ require 'includes/data/hotels.php';
                 <tbody>
                     <?php foreach ($hotels as $hotel) : ?>
                         <tr>
-                            <td><?= $hotel['name'] ?></td>
-                            <td><?= $hotel['description'] ?></td>
-                            <td>
-                                <?php if($hotel['parking']) : ?>
-                                    <span class="check">
-                                        <i class="fa-solid fa-check"></i>
-                                    </span>
-                                <?php else : ?>
-                                    <span class="xmark">
-                                        <i class="fa-solid fa-xmark"></i>
-                                    </span>
-                                <?php endif ?>
-                            </td>
-                            <td><?= $hotel['vote'] ?></td>
-                            <td><?= $hotel['distance_to_center'] ?></td>
+                            <?php if (empty($data) || $hotel['parking'] === true) : ?>
+                                <td><?= $hotel['name'] ?></td>
+                                <td><?= $hotel['description'] ?></td>
+                                <td>
+                                    <?php if($hotel['parking']) : ?>
+                                        <span class="check">
+                                            <i class="fa-solid fa-check"></i>
+                                        </span>
+                                    <?php else : ?>
+                                        <span class="xmark">
+                                            <i class="fa-solid fa-xmark"></i>
+                                        </span>
+                                    <?php endif ?>
+                                </td>
+                                <td><?= $hotel['vote'] ?></td>
+                                <td><?= $hotel['distance_to_center'] ?></td>
+                            <?php endif ?>
                         </tr>
                     <?php endforeach ?>
                 </tbody>
