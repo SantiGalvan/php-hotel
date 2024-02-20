@@ -54,7 +54,17 @@ require 'includes/data/hotels.php';
                         <tr>
                             <td><?= $hotel['name'] ?></td>
                             <td><?= $hotel['description'] ?></td>
-                            <td><?= $hotel['parking'] ?></td>
+                            <td class="d-flex">
+                                <?php if($hotel['parking']) : ?>
+                                    <span class="check">
+                                        <i class="fa-solid fa-check"></i>
+                                    </span>
+                                <?php else : ?>
+                                    <span class="xmark">
+                                        <i class="fa-solid fa-xmark"></i>
+                                    </span>
+                                <?php endif ?>
+                            </td>
                             <td><?= $hotel['vote'] ?></td>
                             <td><?= $hotel['distance_to_center'] ?></td>
                         </tr>

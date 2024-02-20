@@ -15,3 +15,23 @@ body {
 .separator {
     border: 1px solid black;
 }
+
+/*? Main */
+
+/* Section Hotels */
+span {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+span.check {
+    background-color: green;
+}
+
+span.xmark {
+    background-color: red;
+}
