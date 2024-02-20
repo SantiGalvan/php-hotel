@@ -24,5 +24,11 @@
             <div class="separator"></div>
         </div>
     </header>
+
+    <main>
+
+        <!-- Section Hotels -->
+        <section id="hotels"></section>
+    </main>
 </body>
 </html>
