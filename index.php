@@ -1,5 +1,7 @@
 <?php
 require 'includes/data/hotels.php';
+
+$data = $_GET;
 ?>
 
 <!DOCTYPE html>
@@ -65,21 +67,23 @@ require 'includes/data/hotels.php';
                 <tbody>
                     <?php foreach ($hotels as $hotel) : ?>
                         <tr>
-                            <td><?= $hotel['name'] ?></td>
-                            <td><?= $hotel['description'] ?></td>
-                            <td>
-                                <?php if($hotel['parking']) : ?>
-                                    <span class="check">
-                                        <i class="fa-solid fa-check"></i>
-                                    </span>
-                                <?php else : ?>
-                                    <span class="xmark">
-                                        <i class="fa-solid fa-xmark"></i>
-                                    </span>
-                                <?php endif ?>
-                            </td>
-                            <td><?= $hotel['vote'] ?></td>
-                            <td><?= $hotel['distance_to_center'] ?></td>
+                            <?php if (empty($data) || $hotel['parking'] === true) : ?>
+                                <td><?= $hotel['name'] ?></td>
+                                <td><?= $hotel['description'] ?></td>
+                                <td>
+                                    <?php if($hotel['parking']) : ?>
+                                        <span class="check">
+                                            <i class="fa-solid fa-check"></i>
+                                        </span>
+                                    <?php else : ?>
+                                        <span class="xmark">
+                                            <i class="fa-solid fa-xmark"></i>
+                                        </span>
+                                    <?php endif ?>
+                                </td>
+                                <td><?= $hotel['vote'] ?></td>
+                                <td><?= $hotel['distance_to_center'] ?></td>
+                            <?php endif ?>
                         </tr>
                     <?php endforeach ?>
                 </tbody>
