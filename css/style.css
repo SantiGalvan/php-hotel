@@ -16,6 +16,10 @@ body {
     border: 1px solid black;
 }
 
+.form-control {
+    width: 50%;
+}
+
 /*? Main */
 
 /* Section Hotels */
